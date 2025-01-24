@@ -1,0 +1,40 @@
+<html>
+	<script>
+		function loadDoc()
+		{
+  			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function()
+			{
+				if (this.readyState == 4 && this.status == 200)
+				{
+					myFunction(this);
+				}
+			};
+			xhttp.open("GET", "anagrafica.xml", true);
+			xhttp.send();
+		}
+		function myFunction(xml)
+		{
+			var i;
+			var xmlDoc = xml.responseXML;
+			var table="<tr><th>Nome</th><th>Cognome</th><th>Telefono</th><th>Citta</th><th>Data di nascita</th></tr>";
+			var x = xmlDoc.getElementsByTagName("persona");
+			for (i = 0; i <x.length; i++)
+			{
+				table += "<tr><td>" + x[i].getElementsByTagName("nome")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + x[i].getElementsByTagName("cognome")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + x[i].getElementsByTagName("citta")[0].childNodes[0].nodeValue +  
+                    "</td><td>" + x[i].getElementsByTagName("dataNascita")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("telefono")[0].childNodes[0].nodeValue + 
+                "</td></tr>";
+			}
+			document.getElementById("tabella").innerHTML = table;
+		}
+
+	</script>
+	<body onload="loadDoc()">
+		<h1> Anagrafica Xml </h1>
+		<h3> Profita Davide </h3>
+		<table border="1" id="tabella"></table>
+	</body>
+</html>
