@@ -1,9 +1,25 @@
 <?xml version="1.1" encodings="UTF-8">
-<persona>
-    <nome>Tommaso</nome>
-    <cognome>Di Benedetto</cognome>
-    <telefono>+39 366 407 4936</telefono>
-    <citta>Corbetta</citta>
-    <indirizzo>via G. Di Vittorio</indirizzo>
-    <dataNascita>27/04/2006</dataNascita>
-</persona>    
+<personaggi>
+    <persona>
+        <nome>Tommaso</nome>
+        <cognome>Di Benedetto</cognome>
+        <telefono>+39 366 407 4936</telefono>
+        <citta>Corbetta</citta>
+        <dataNascita>27/04/2006</dataNascita>
+    </persona>
+    <persona>
+        <nome>Matteo</nome>
+        <cognome>Nessi</cognome>
+        <telefono>+39 333 333 3334</telefono>
+        <citta>Cornaredo</citta>
+        <dataNascita>10/07/2006</dataNascita>
+    </persona>
+    <persona>
+        <nome>Elisa</nome>
+        <cognome>Fiorenza</cognome>
+        <telefono>+39 444 444 4445</telefono>
+        <citta>Vanzago</citta>
+        
+        <dataNascita>11/02/2006</dataNascita>
+    </persona>
+</personaggi>
